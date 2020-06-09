@@ -14,12 +14,14 @@
 
   <script>
 
-    let URL = 'https://hetler.eu.auth0.com/.well-known/jwks.json';
+    let URL = 'https://dev-rp3c39cs.eu.auth0.com/authorize';
 
     let options = {
-      response_type:'JSON',
+      response_type:'code',
       client_id: 'EbBNYaenm96LM1bYprxy6q4INKIbvLhh',
       redirect_uri: 'http://localhost:3030/auth0',
+      scope: 'read:user',
+      state: 'asldfjdfs'
     }
 
     let QueryString = Object.keys(options).map((key) => {
